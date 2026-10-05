@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erfan Basiri</title>
+<meta name="description" content="Erfan Basiri - PhD student in Computer Science at Old Dominion University (ODU). Research on AI and cyber-physical systems security, physics-based machine learning, acoustic metamaterials and ultrasonic guided waves.">
+<meta property="og:title" content="Erfan Basiri">
+<meta property="og:description" content="PhD student in Computer Science at ODU - AI and cyber-physical systems security.">
+<meta property="og:image" content="images/portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #226e93;
+    --blue2: #2f6f9f;
+    --link: #006580;
+    --red: #ff0000;
+    --grey: #999999;
+    --author: #666666;
+    --rule: #dadce0;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #212121;
+    font-family: Lato, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page { max-width: 1202px; margin: 0 auto; padding: 24px 24px 0; }
+  section { padding: 12px 0 40px; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+
+  /* ---- headings ---- */
+  .h-big {
+    font-family: Lato, sans-serif; font-style: italic; font-weight: 400;
+    font-size: 36pt; line-height: 1.2; color: var(--blue); margin: 0 0 8px;
+  }
+  .topics {
+    font-family: Lato, Arial, sans-serif; font-weight: 700; font-size: 18pt; line-height: 1.2;
+    color: var(--grey); text-align: justify; margin: 0;
+  }
+  .sub {
+    font-family: Lato, sans-serif; font-style: italic; font-weight: 400; font-size: 23pt;
+    line-height: 1.8; color: var(--blue); text-align: center; margin: 16px 0 8px;
+  }
+  .sub.alt { color: var(--blue2); }
+
+  /* ---- about ---- */
+  .about { display: grid; grid-template-columns: 7fr 4fr 1fr; gap: 34px; align-items: start; padding-top: 0; }
+  .about p {
+    font-size: 11pt; line-height: 1.6667; color: #000; text-align: justify; margin: 12px 0 0;
+  }
+  .about .text { padding-left: 7px; }
+  .about .photo { padding-top: 4px; }
+
+  /* ---- research ---- */
+  .wide { margin: 24px auto 0; width: 100%; }
+  .wide.centered { max-width: 94%; }
+  .pub-title {
+    font-family: Lato, Arial, sans-serif; line-height: 1.8; text-align: justify; margin: 9pt 0 0; color: #000;
+  }
+  .pub-title .tag { color: var(--red); font-weight: 900; }
+  .pub-title .title { font-weight: 900; color: #000; }
+  .pub-title .links { color: var(--blue); font-weight: 900; }
+  .pub-title .links a { color: var(--link); }
+  .s125 { font-size: 12.5pt; }
+  .s12 { font-size: 12pt; }
+  .slides { font-family: Roboto, Arial, sans-serif; font-weight: 700; font-size: 14pt; color: var(--blue); }
+  .slides a { color: var(--link); }
+  .authors {
+    font-family: Lato, Arial, sans-serif; font-size: 12pt; font-style: italic; color: var(--author);
+    line-height: 1.8; margin: 1pt 0 0; text-align: justify;
+  }
+  .authors b { font-weight: 900; }
+  .bullets { list-style-type: square; margin: 18px 0 0; padding: 0; }
+  .bullets li { margin-left: 15pt; }
+  .bullets p {
+    font-family: Roboto, Arial, sans-serif; font-weight: 500; font-size: 10.5pt; line-height: 1.38;
+    color: #000; text-align: justify; margin: 0 0 10pt;
+  }
+  .bullets.dark p { color: #131314; }
+
+  .pub { display: grid; grid-template-columns: 5fr 7fr; gap: 36px; align-items: start; margin-top: 72px; }
+  #research { padding-top: 40px; }
+  #acoustic .sub { margin-top: 48px; }
+  #ultrasonic { padding-top: 24px; }
+  .pub .left > img + img { margin-top: 24px; }
+  .pub .right > img { margin-top: 18px; }
+
+  .refs p { font-family: Arial, sans-serif; font-size: 11pt; color: var(--grey); margin: 12px 0 0; }
+  .refs { padding: 60px 7px 40px; }
+
+  footer { display: flex; justify-content: center; gap: 16px; padding: 48px 0 40px; }
+  footer img { width: 48px; height: 48px; }
+  footer a:hover { opacity: .8; }
+
+  /* ---- responsive (same breakpoints as the original site) ---- */
+  @media (max-width: 1279px) { .page { max-width: 100%; } }
+  @media (max-width: 767px) {
+    .h-big { font-size: 32pt; }
+    .topics { font-size: 17pt; }
+    .sub { font-size: 21pt; line-height: 1.4; }
+    .about, .pub { grid-template-columns: 1fr; gap: 20px; }
+    .pub { margin-top: 48px; }
+    .about .photo { max-width: 360px; }
+    .wide.centered { max-width: 100%; }
+  }
+  @media (max-width: 479px) {
+    .h-big { font-size: 27pt; }
+    .sub { font-size: 19pt; }
+    .page { padding: 16px 16px 0; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ===================== About Me ===================== -->
+  <section class="about" id="about">
+    <div class="text">
+      <h2 class="h-big">About Me</h2>
+      <p>As of summer 2026, I am a PhD student in Computer Science at ODU, working as a TA and RA in the School of Cybersecurity. My research focuses on AI and cyber-physical systems security.</p>
+      <p>From Jan 2025 to Dec 2025 , I worked as an RA at UVM in ME department, focusing on designing automated, and physically meaningful algorithms using physics-based machine learning and signal processing techniques to tackle wave propagation problems in acoustic metamaterial design, including wave-mode tracing, prediction, and inverse design.</p>
+      <p>Prior to that, I earned a BSc and MSc in EE from the University of Guilan in July 2020 and Feb 2024, respectively, and completed high school at NODET, all in Rasht, Iran. I worked on designing vibrometric approaches at the DSP Lab by developing signal and data processing methods to characterize defects in multi-layered structures, including CFRP, aluminum alloys, and sandwich panels, using broadband ultrasonic guided wavefield data.</p>
+    </div>
+    <div class="photo"><img src="images/portrait.jpg" alt="Erfan Basiri"></div>
+    <div></div>
+  </section>
+
+  <hr>
+
+  <!-- ===================== Research Experience ===================== -->
+  <section id="research">
+    <h2 class="h-big">Research Experience</h2>
+    <h2 class="topics">RL-Based AI and Cyber-physical Systems Security and Safety| <a href="#acoustic">Acoustic Metamaterial Inverse Design</a> | <a href="#ultrasonic">Ultrasonic Guided Waves Processing for Defect Characterization in Multilayered Structures</a></h2>
+  </section>
+
+  <section id="acoustic">
+    <h3 class="sub">Acoustic Metamaterial Inverse Design</h3>
+    <img class="wide centered" src="images/metamaterial-inverse-design.jpg" alt="Automatic mode tracing, toy model synthesis, surrogate model for dispersion curve generation and physics-based inverse design of acoustic metamaterials">
+    <p class="pub-title"><span class="tag s125">[Research Asistant (UVM): 2025]:</span> <span class="title s125">Physics-Based Machine Learning and Signal Processing for Automated Wave-Mode Tracing, Prediction, and Inverse Design of Acoustic Metamaterials</span> <span class="slides">(<a href="https://drive.google.com/file/d/1aIOdDmClMrjotGXx8BqTL6ipXEjBxYaU/view?usp=sharing" target="_blank" rel="noopener">Slides</a>)</span></p>
+  </section>
+
+  <hr>
+
+  <section id="ultrasonic">
+    <h3 class="sub alt">Ultrasonic Guided Waves Processing for Defect Characterization in Multilayered Structures</h3>
+    <img class="wide" src="images/guided-waves-aircraft.png" alt="Guided wavefield on an aircraft wing">
+    <img class="wide" src="images/sldv-setup-and-wavefields.jpg" alt="3D scanning laser Doppler vibrometer setup with actuator and test specimen, and measured wavefields">
+
+    <!-- Thesis -->
+    <div class="pub">
+      <div class="left">
+        <img src="images/thesis-tf-chirp.png" alt="Time-frequency representation of a broadband chirp">
+        <img src="images/thesis-spectrogram.jpg" alt="Spectrogram">
+      </div>
+      <div class="right">
+        <p class="pub-title"><span class="tag s125">[Thesis: 2024]:</span> <span class="title s125">Time-frequency analysis of broadband ultrasonic guided wavefield for composite defect characterization</span></p>
+        <p class="authors"><b>Erfan Basiri</b> and Reza P.R. Hasanzadeh</p>
+        <ul class="bullets">
+          <li><p>In this thesis, the application of time-frequency representation transformations are elaborated in ultrasonic guided wavefield, both in presence and absence of noise, to design automated defect detection/depth estimation algorithms.</p></li>
+          <li><p>The obtained results demonstrate that the proposed method can effectively detect different kinds of damage regardless of being deep or shallow in noise presence.</p></li>
+        </ul>
+        <img src="images/thesis-time-frequency.jpg" alt="Complex time-frequency representation">
+      </div>
+    </div>
+
+    <!-- Journal: Measurement 2024 -->
+    <div class="pub">
+      <div class="left">
+        <img src="images/be2di-flowchart.png" alt="BE2DI flowchart">
+        <img src="images/be2di-damage-maps.png" alt="BE2DI damage maps">
+      </div>
+      <div class="right">
+        <p class="pub-title" style="margin-bottom:2pt"><span class="tag s12">[Journal: Measurement - 2024]:</span> <a class="title s125" href="https://www.sciencedirect.com/science/article/abs/pii/S0263224124002318" target="_blank" rel="noopener">Damage Imaging in Plates by Evaluating Local Entropy in Guided Wavefield Data</a> <span class="links s12">(<a href="https://www.sciencedirect.com/science/article/abs/pii/S0263224124002318" target="_blank" rel="noopener">Elsevier</a>)</span></p>
+        <p class="authors"><b>Erfan Basiri</b>, Reza P.R. Hasanzadeh and Mathias Kersemans</p>
+        <ul class="bullets">
+          <li><p>This paper presents a new algorithm called broadband entropy-based two-stage damage imaging (BE2DI) for the detection and imaging of defects in multi-layer plates.</p></li>
+          <li><p>The method differentiates defects from either local scattering phenomena of propagating Lamb waves or locally increased vibrational activity for stimulated global plate resonances with exploiting higher vibrational activity of full-field broadband vibration signals at defective regions and distinct spatial behavior of defects and artifacts.</p></li>
+          <li><p>Using these features, first a candidate damage map is constructed by means of an iterative thresholding based on descriptive statistics of broadband data. Afterwards, an adaptive regional damage index based on local entropy is introduced, which utilizes operational deflection shapes to process previously identified candidate regions and subsequently reveal both shallow and deep damages.</p></li>
+          <li><p>BE2DI can be seen as an automated local defect resonance identification approach in the case of shallow defects.</p></li>
+          <li><p>Multiple plates having various defect types with different sizes and depths are investigated. Broadband chirp signals are used to excite the plates using low-power piezoelectric actuators, and vibrational data is registered by 3D scanning laser Doppler vibrometry.</p></li>
+          <li><p>The obtained results demonstrate that the proposed method can effectively detect different kinds of damage regardless of being deep or shallow.</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Conf: ICSPIS2021 -->
+    <div class="pub">
+      <div class="left">
+        <img src="images/swf-filtered-images.png" alt="Successive wavenumber filtering results">
+        <img src="images/swf-dispersion.png" alt="Wavenumber-frequency dispersion with A0 and S0 modes">
+      </div>
+      <div class="right">
+        <p class="pub-title"><span class="tag s12">[Conf. Paper: ICSPIS2021 - 2022]:</span> <a class="title s12" href="https://ieeexplore.ieee.org/document/9729336" target="_blank" rel="noopener">A Successive Wavenumber Filtering Approach for Defect Detection in CFRP using Wavefield Scanning</a> <span class="links s12">(<a href="https://ieeexplore.ieee.org/document/9729336" target="_blank" rel="noopener">IEEE</a> / <a href="https://www.researchgate.net/profile/Erfan-Basiri/publication/359185024_A_Successive_Wavenumber_Filtering_Approach_for_Defect_Detection_in_CFRP_using_Wavefield_Scanning/links/631c645c071ea12e36228626/A-Successive-Wavenumber-Filtering-Approach-for-Defect-Detection-in-CFRP-using-Wavefield-Scanning.pdf" target="_blank" rel="noopener">Paper</a>)</span></p>
+        <p class="authors" style="margin-top:9pt"><b>Erfan Basiri</b>, Reza P.R. Hasanzadeh and Mathias Kersemans</p>
+        <ul class="bullets dark">
+          <li><p>Owing to the high sensitivity of carbon fiber reinforced polymer (CFRP) to internal damages, defect detection through Non-destructive testing (NDT) is deemed an essential task.</p></li>
+          <li><p>Scattered waves corresponding to deep defects are usually obscured by other waves due to their weak amplitude. A successful method to highlight these waves is to use wavenumber filtering (WF).</p></li>
+          <li><p>WF suffers from the assumption that the optimal frequency range of excitation signal is known beforehand, which is not always available. Another drawback is that when more than one type of guided waves mode exist, this method is not capable of highlighting desirable waves or vibrations sufficiently.</p></li>
+          <li><p>In this paper, full wavefield images are first constituted by exciting the guided waves via broadband chirp signal and registering them with scanning laser Doppler vibrometery (SLDV).</p></li>
+          <li><p>Then, a successive wavenumber filtering (SWF) approach is introduced, which efficiently removes undesirable higher order guided wave modes, and removes the need to know a priori the optimal excitation frequency.</p></li>
+        </ul>
+        <img src="images/swf-flowchart.png" alt="Successive wavenumber filtering flowchart">
+      </div>
+    </div>
+
+    <!-- Conf: MVIP2020 -->
+    <div class="pub">
+      <div class="left">
+        <img src="images/mvip-cfrp-plates.png" alt="CFRP plate with flat-bottom holes and BVID">
+        <img src="images/mvip-dnn-results.png" alt="DNN defect image retrieval results">
+      </div>
+      <div class="right">
+        <p class="pub-title"><span class="tag s12">[Conf. Paper: MVIP2020 - 2020]:</span> <span class="title s12">A DNN-based Image Retrieval Approach for Detection of Defective Area in CFRPs through LDV Data</span> <span class="links s12">(<a href="https://ieeexplore.ieee.org/document/9116908" target="_blank" rel="noopener">IEEE</a> / <a href="https://www.researchgate.net/profile/Erfan-Basiri/publication/342193388_A_DNN-based_Image_Retrieval_Approach_for_Detection_of_Defective_Area_in_Carbon_Fiber_Reinforced_Polymers_through_LDV_Data/links/64ed50039b1cb33d732c6af4/A-DNN-based-Image-Retrieval-Approach-for-Detection-of-Defective-Area-in-Carbon-Fiber-Reinforced-Polymers-through-LDV-Data.pdf" target="_blank" rel="noopener">Paper</a>)</span></p>
+        <p class="authors"><b>Erfan Basiri</b>, Reza P.R. Hasanzadeh, Saman Hadi and Mathias Kersemans</p>
+        <ul class="bullets dark">
+          <li><p>Carbon fiber reinforced polymer (CFRP) materials, due to their specific strength and high consistency against erosion and corrosion, are widely used in industrial applications; however, there are also disadvantages: e.g. they are prone to different kinds of internal defects which could jeopardize the structural integrity.</p></li>
+          <li><p>Recently, local defect resonance (LDR), a subcategory of ultrasonic nondestructive testing, has been successfully used to solve this issue. However, the drawback of the technique is that the frequency at which the LDR occurs must be known and it is not capable to be used for the detection of deep defects.</p></li>
+          <li><p>In this paper, a deep neural network (DNN) methodology is employed to remove this limitation and to acquire a better defect image retrieval process and also to achieve a model for the approximate depth estimation of such defects.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== References ===================== -->
+  <section class="refs">
+    <p>[1] <a href="https://www.researchgate.net/publication/356811851_Full-Field_Elastic_Wave_Imaging_and_Processing_for_Non-Destructive_Inspection_of_Fiber-Reinforced_Polymers" target="_blank" rel="noopener">Full-Field Elastic Wave Imaging and Processing for Non-Destructive Inspection of Fiber-Reinforced Polymers</a></p>
+    <p>[2] <a href="https://www.researchgate.net/publication/335990167_PPINN_Parareal_Physics-Informed_Neural_Network_for_time-dependent_PDEs" target="_blank" rel="noopener">PPINN: Parareal Physics-Informed Neural Network for time-dependent PDEs</a></p>
+  </section>
+</main>
+
+<footer>
+  <a href="mailto:ebasi002@odu.edu" title="Email"><img src="images/icon-email.png" alt="Email"></a>
+  <a href="tel:+18028294065" title="Phone number"><img src="images/icon-phone.png" alt="Phone number"></a>
+  <a href="https://scholar.google.com/citations?user=zh0eeIsAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar"><img src="images/icon-scholar.png" alt="Google Scholar"></a>
+  <a href="https://github.com/EBARV" target="_blank" rel="noopener" title="GitHub"><img src="images/icon-github.png" alt="GitHub"></a>
+</footer>
+</body>
+</html>
