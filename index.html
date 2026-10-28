@@ -118,6 +118,11 @@
     }
     .contact a:hover img, .contact a:focus-visible img { transform: translateX(3px); }
   }
+  /* very wide screens: a horizontal row in the top-left corner of the window */
+  @media (min-width: 1640px) {
+    .contact { top: 20px; left: 28px; flex-direction: row; gap: 18px; }
+    .contact a:hover img, .contact a:focus-visible img { transform: translateY(-3px); }
+  }
 
   /* ---- responsive (same breakpoints as the original site) ---- */
   @media (max-width: 1279px) { .page { max-width: 100%; } }
