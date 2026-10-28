@@ -61,13 +61,13 @@
   .about .text { padding-left: 7px; }
   .about .photo { padding-top: 4px; }
 
-  /* ---- contact links beside the photo ---- */
-  .about .photo { display: flex; align-items: stretch; gap: 14px; }
-  .about .photo > img { flex: 1; min-width: 0; align-self: flex-start; }
-  .contact { display: flex; flex-direction: column; justify-content: space-between; gap: 10px; padding: 2px 0; }
+  /* ---- contact links next to the "About Me" heading ---- */
+  .about-head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 8px; }
+  .about-head .h-big { margin: 0; }
+  .contact { display: flex; gap: 16px; }
   .contact a { display: block; line-height: 0; }
   .contact img { width: 34px; height: 34px; transition: transform .15s ease, opacity .15s ease; }
-  .contact a:hover img, .contact a:focus-visible img { transform: translateX(-3px); opacity: .85; }
+  .contact a:hover img, .contact a:focus-visible img { transform: translateY(-3px); opacity: .85; }
 
   /* ---- research ---- */
   .wide { margin: 24px auto 0; width: 100%; }
@@ -110,20 +110,6 @@
   footer img { width: 48px; height: 48px; }
   footer a:hover { opacity: .8; }
 
-  /* wide screens: contact icons move into the left margin and stay visible while scrolling */
-  @media (min-width: 1360px) {
-    .contact {
-      position: fixed; top: 44px; left: calc(50% - 601px - 62px);
-      justify-content: flex-start; gap: 16px; padding: 0;
-    }
-    .contact a:hover img, .contact a:focus-visible img { transform: translateX(3px); }
-  }
-  /* very wide screens: a horizontal row in the top-left corner of the window */
-  @media (min-width: 1640px) {
-    .contact { top: 20px; left: 28px; flex-direction: row; gap: 18px; }
-    .contact a:hover img, .contact a:focus-visible img { transform: translateY(-3px); }
-  }
-
   /* ---- responsive (same breakpoints as the original site) ---- */
   @media (max-width: 1279px) { .page { max-width: 100%; } }
   @media (max-width: 767px) {
@@ -148,21 +134,21 @@
   <!-- ===================== About Me ===================== -->
   <section class="about" id="about">
     <div class="text">
-      <h2 class="h-big">About Me</h2>
+      <div class="about-head">
+        <h2 class="h-big">About Me</h2>
+        <nav class="contact" aria-label="Contact links">
+          <a href="mailto:ebasi002@odu.edu" title="Email"><img src="images/icon-email.png" alt="Email"></a>
+          <a href="tel:+18028294065" title="Phone number"><img src="images/icon-phone.png" alt="Phone"></a>
+          <a href="https://scholar.google.com/citations?user=zh0eeIsAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar"><img src="images/icon-scholar.png" alt="Scholar"></a>
+          <a href="https://github.com/EBARV" target="_blank" rel="noopener" title="GitHub"><img src="images/icon-github.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/ebasirir" target="_blank" rel="noopener" title="LinkedIn"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
+        </nav>
+      </div>
       <p>As of summer 2026, I am a PhD student in Computer Science at ODU, working as a TA and RA in the School of Cybersecurity. My research focuses on AI and cyber-physical systems security.</p>
       <p>From Jan 2025 to Dec 2025 , I worked as an RA at UVM in ME department, focusing on designing automated, and physically meaningful algorithms using physics-based machine learning and signal processing techniques to tackle wave propagation problems in acoustic metamaterial design, including wave-mode tracing, prediction, and inverse design.</p>
       <p>Prior to that, I earned a BSc and MSc in EE from the University of Guilan in July 2020 and Feb 2024, respectively, and completed high school at NODET, all in Rasht, Iran. I worked on designing vibrometric approaches at the DSP Lab by developing signal and data processing methods to characterize defects in multi-layered structures, including CFRP, aluminum alloys, and sandwich panels, using broadband ultrasonic guided wavefield data.</p>
     </div>
-    <div class="photo">
-      <nav class="contact" aria-label="Contact links">
-        <a href="mailto:ebasi002@odu.edu" title="Email"><img src="images/icon-email.png" alt="Email"></a>
-        <a href="tel:+18028294065" title="Phone number"><img src="images/icon-phone.png" alt="Phone"></a>
-        <a href="https://scholar.google.com/citations?user=zh0eeIsAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar"><img src="images/icon-scholar.png" alt="Scholar"></a>
-        <a href="https://github.com/EBARV" target="_blank" rel="noopener" title="GitHub"><img src="images/icon-github.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/ebasirir" target="_blank" rel="noopener" title="LinkedIn"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
-      </nav>
-      <img src="images/portrait.jpg" alt="Erfan Basiri">
-    </div>
+    <div class="photo"><img src="images/portrait.jpg" alt="Erfan Basiri"></div>
     <div></div>
   </section>
 
