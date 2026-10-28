@@ -37,6 +37,10 @@
   .page { max-width: 1202px; margin: 0 auto; padding: 24px 24px 0; }
   section { padding: 8px 0 20px; }
   hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+  /* headings that directly follow a divider sit close to it */
+  hr + section { padding-top: 0; }
+  hr + section > .h-big:first-child { margin-top: 2px; line-height: 1.1; }
+  hr + section > .sub:first-child { margin-top: 6px; line-height: 1.4; }
 
   /* ---- headings ---- */
   .h-big {
