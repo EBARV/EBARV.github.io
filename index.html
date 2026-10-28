@@ -110,6 +110,15 @@
   footer img { width: 48px; height: 48px; }
   footer a:hover { opacity: .8; }
 
+  /* wide screens: contact icons move into the left margin and stay visible while scrolling */
+  @media (min-width: 1360px) {
+    .contact {
+      position: fixed; top: 44px; left: calc(50% - 601px - 62px);
+      justify-content: flex-start; gap: 16px; padding: 0;
+    }
+    .contact a:hover img, .contact a:focus-visible img { transform: translateX(3px); }
+  }
+
   /* ---- responsive (same breakpoints as the original site) ---- */
   @media (max-width: 1279px) { .page { max-width: 100%; } }
   @media (max-width: 767px) {
