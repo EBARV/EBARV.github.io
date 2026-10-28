@@ -61,14 +61,13 @@
   .about .text { padding-left: 7px; }
   .about .photo { padding-top: 4px; }
 
-  /* ---- contact links under the photo ---- */
-  .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin-top: 14px; }
-  .contact a {
-    display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none;
-    font-family: Lato, Arial, sans-serif; font-size: 9pt; color: var(--blue);
-  }
-  .contact img { width: 36px; height: 36px; transition: transform .15s ease, opacity .15s ease; }
-  .contact a:hover img, .contact a:focus-visible img { transform: translateY(-3px); opacity: .85; }
+  /* ---- contact links beside the photo ---- */
+  .about .photo { display: flex; align-items: stretch; gap: 14px; }
+  .about .photo > img { flex: 1; min-width: 0; align-self: flex-start; }
+  .contact { display: flex; flex-direction: column; justify-content: space-between; gap: 10px; padding: 2px 0; }
+  .contact a { display: block; line-height: 0; }
+  .contact img { width: 34px; height: 34px; transition: transform .15s ease, opacity .15s ease; }
+  .contact a:hover img, .contact a:focus-visible img { transform: translateX(-3px); opacity: .85; }
 
   /* ---- research ---- */
   .wide { margin: 24px auto 0; width: 100%; }
@@ -141,14 +140,14 @@
       <p>Prior to that, I earned a BSc and MSc in EE from the University of Guilan in July 2020 and Feb 2024, respectively, and completed high school at NODET, all in Rasht, Iran. I worked on designing vibrometric approaches at the DSP Lab by developing signal and data processing methods to characterize defects in multi-layered structures, including CFRP, aluminum alloys, and sandwich panels, using broadband ultrasonic guided wavefield data.</p>
     </div>
     <div class="photo">
-      <img src="images/portrait.jpg" alt="Erfan Basiri">
       <nav class="contact" aria-label="Contact links">
-        <a href="mailto:ebasi002@odu.edu" title="Email"><img src="images/icon-email.png" alt="">Email</a>
-        <a href="tel:+18028294065" title="Phone number"><img src="images/icon-phone.png" alt="">Phone</a>
-        <a href="https://scholar.google.com/citations?user=zh0eeIsAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar"><img src="images/icon-scholar.png" alt="">Scholar</a>
-        <a href="https://github.com/EBARV" target="_blank" rel="noopener" title="GitHub"><img src="images/icon-github.png" alt="">GitHub</a>
-        <a href="https://www.linkedin.com/in/ebasirir" target="_blank" rel="noopener" title="LinkedIn"><img src="images/icon-linkedin.png" alt="">LinkedIn</a>
+        <a href="mailto:ebasi002@odu.edu" title="Email"><img src="images/icon-email.png" alt="Email"></a>
+        <a href="tel:+18028294065" title="Phone number"><img src="images/icon-phone.png" alt="Phone"></a>
+        <a href="https://scholar.google.com/citations?user=zh0eeIsAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar"><img src="images/icon-scholar.png" alt="Scholar"></a>
+        <a href="https://github.com/EBARV" target="_blank" rel="noopener" title="GitHub"><img src="images/icon-github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/ebasirir" target="_blank" rel="noopener" title="LinkedIn"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
       </nav>
+      <img src="images/portrait.jpg" alt="Erfan Basiri">
     </div>
     <div></div>
   </section>
